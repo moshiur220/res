@@ -15,6 +15,46 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Add Owl Carousel CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+
+    <!-- Add jQuery (required for Owl Carousel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Add Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".owl-carousel").owlCarousel({
+          loop: true,
+          margin: 10,
+          nav: false,
+          autoplay: true,
+          autoplayTimeout: 3000, // Auto play interval in milliseconds
+          autoplayHoverPause: true,
+          responsive: {
+            0: {
+              items: 1,
+            },
+            600: {
+              items: 3,
+            },
+            1000: {
+              items: 4,
+            },
+          },
+        });
+      });
+    </script>
+
     <style>
       /* Custom Styles for fixed top menu and responsive layout */
       .sticky-top {
@@ -153,19 +193,25 @@
     <section id="home" class="mt-8">
       <!-- Sliding Video Section -->
       <section id="sliding-video" class="mt-8">
-        <div class="max-w-7xl mx-auto bg-white p-6 shadow-lg rounded-lg">
-          <div class="aspect-w-16 aspect-h-16">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/-SOWqQl7sIc"
-              title="Faime - Night Sky (Official Lyric Video)"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
+        <div class="container mx-auto carousel owl-carousel owl-theme">
+          <div class="carousel-item">
+            <img src="./asset/images/galaxy-Restaurant-02.jpg" alt="Slide 1" />
           </div>
+          <div class="carousel-item">
+            <img src="./asset/images/galaxy-Restaurant-12.jpg" alt="Slide 2" />
+          </div>
+          <div class="carousel-item">
+            <img src="./asset/images/galaxy-Restaurant-14.jpg" alt="Slide 3" />
+          </div>
+          <div class="carousel-item">
+            <img src="./asset/images/galaxy-Restaurant-18.jpg" alt="Slide 4" />
+          </div>
+          <!-- <div class="carousel-item">
+            <img src="./asset/images/galaxy-Restaurant-26.jpg" alt="Slide 5" />
+          </div>
+          <div class="carousel-item">
+            <img src="./asset/images/galaxy-Restaurant-27.jpg" alt="Slide 6" />
+          </div> -->
         </div>
       </section>
 
@@ -176,22 +222,22 @@
         >
           <div class="bg-white p-4 shadow-lg rounded-lg">
             <img
-              src="https://plus.unsplash.com/premium_photo-1674147611133-be87db07f597?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Still Photo 1"
+              src="./asset/images/galaxy-Restaurant-01.jpg"
+              alt="Slide 5"
               class="w-full rounded-lg"
             />
           </div>
           <div class="bg-white p-4 shadow-lg rounded-lg">
             <img
-              src="https://images.unsplash.com/photo-1546793665-c74683f339c1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Still Photo 2"
+              src="./asset/images/galaxy-Restaurant-48.jpg"
+              alt="Slide 5"
               class="w-full rounded-lg"
             />
           </div>
           <div class="bg-white p-4 shadow-lg rounded-lg">
             <img
-              src="https://plus.unsplash.com/premium_photo-1672363353881-68c8ff594e25?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="Still Photo 3"
+              src="./asset/images/galaxy-Restaurant-17.jpg"
+              alt="Slide 5"
               class="w-full rounded-lg"
             />
           </div>
@@ -212,9 +258,9 @@
           pariatur.
         </p>
         <img
-          src="https://images.unsplash.com/photo-1546964124-0cce460f38ef?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="About Image"
-          class="w-full rounded-lg mt-4"
+          src="./asset/images/galaxy-Restaurant-cover2.jpg"
+          alt="Slide 5"
+          class="w-full rounded-lg"
         />
       </div>
     </section>
@@ -232,9 +278,9 @@
           pariatur.
         </p>
         <img
-          src="https://images.unsplash.com/photo-1543353071-873f17a7a088?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Profile Image"
-          class="w-full rounded-lg mt-4"
+          src="./asset/images/galaxy-Restaurant-34.jpg"
+          alt="Slide 5"
+          class="w-full rounded-lg"
         />
       </div>
     </section>
@@ -248,23 +294,26 @@
             <div class="flex flex-1 flex-col">
               <!-- img_01 -->
               <img
-                class="object-cover h-full"
-                src="https://images.unsplash.com/photo-1543975978-4fa3ae01cad5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="./asset/images/galaxy-Restaurant-25.jpg"
+                alt="Slide 5"
+                class="w-full rounded-lg"
               />
             </div>
             <div class="hidden md:flex flex-1 flex-row gap-2">
               <div class="flex flex-1 flex-col">
                 <!-- img_02 -->
                 <img
-                  class="object-cover h-full"
-                  src="https://images.unsplash.com/photo-1624726175512-19b9baf9fbd1?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="./asset/images/galaxy-Restaurant-26.jpg"
+                  alt="Slide 5"
+                  class="w-full rounded-lg"
                 />
               </div>
               <div class="hidden md:flex flex-1 flex-col">
                 <!-- img_03 -->
                 <img
-                  class="object-cover h-full"
-                  src="https://images.unsplash.com/photo-1665048110211-91d0b74c421c?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY0NjAxMTY&ixlib=rb-4.0.3&q=80"
+                  src="./asset/images/galaxy-Restaurant-26.jpg"
+                  alt="Slide 5"
+                  class="w-full rounded-lg"
                 />
               </div>
             </div>
@@ -274,23 +323,26 @@
               <div class="flex flex-1 flex-col">
                 <!-- img_04 -->
                 <img
-                  class="object-cover h-full"
-                  src="https://images.unsplash.com/photo-1666297599033-09b318f2c8b5?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY2NDExMjk&ixlib=rb-4.0.3&q=80"
+                  src="./asset/images/galaxy-Restaurant-40.jpg"
+                  alt="Slide 5"
+                  class="w-full rounded-lg"
                 />
               </div>
               <div class="hidden md:flex flex-1 flex-col">
                 <!-- img_05 -->
                 <img
-                  class="object-cover h-full"
-                  src="https://images.unsplash.com/photo-1664713815297-9ce06950c022?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY2NDEzMDc&ixlib=rb-4.0.3&q=80"
+                  src="./asset/images/galaxy-Restaurant-41.jpg"
+                  alt="Slide 5"
+                  class="w-full rounded-lg"
                 />
               </div>
             </div>
             <div class="flex flex-1 flex-col">
               <!-- img_06 -->
               <img
-                class="object-cover h-full"
-                src="https://images.unsplash.com/photo-1666060519824-796d5638d809?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NjY2NDExOTQ&ixlib=rb-4.0.3&q=80"
+                src="./asset/images/galaxy-Restaurant-42.jpg"
+                alt="Slide 5"
+                class="w-full rounded-lg"
               />
             </div>
           </div>
@@ -368,9 +420,9 @@
           pariatur.
         </p>
         <img
-          src="https://images.unsplash.com/photo-1542296332-2e4473faf563?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-          alt="Social Image"
-          class="w-full rounded-lg mt-4"
+          src="./asset/images/galaxy-Restaurant-34.jpg"
+          alt="Slide 5"
+          class="w-full rounded-lg"
         />
       </div>
     </section>
